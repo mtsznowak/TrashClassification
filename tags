@@ -1,213 +1,3 @@
-<<<<<<< HEAD
-bio: Anthurium
-bio: Brunch
-bio: Cucumber
-bio: Cuisine
-bio: Cut flowers
-bio: Dish
-bio: Flower
-bio: Flowering plant
-bio: Food
-bio: Gladiolus
-bio: Ingredient
-bio: Leaf
-bio: Meal
-bio: Natural foods
-bio: Petal
-bio: Plant
-bio: Produce
-bio: Summer squash
-bio: Superfood
-bio: Vegan nutrition
-bio: Vegetable
-bio: Vegetarian food
-bio: Zucchini
-bio: À la carte food
-elektronika: Battery
-elektronika: Compact fluorescent lamp
-elektronika: Computer component
-elektronika: Computer monitor
-elektronika: Computer monitor accessory
-elektronika: Computer
-elektronika: Display device
-elektronika: Electronic device
-elektronika: Electronic
-elektronika: Electronics accessory
-elektronika: Flat panel display
-elektronika: Fluorescent lamp
-elektronika: Incandescent light bulb
-elektronika: Lamp
-elektronika: Lcd tv
-elektronika: Light
-elektronika: Light bulb
-elektronika: Light fixture
-elektronika: Lighting
-elektronika: Liquid
-elektronika: Monitor
-elektronika: Multipurpose battery
-elektronika: Output device
-elektronika: Power supply
-elektronika: Product
-elektronika: Screen
-elektronika: Technology
-metal-plastik: Aluminum can
-metal-plastik: Aqua
-metal-plastik: Bag
-metal-plastik: Beverage can
-metal-plastik: Bottle
-metal-plastik: Bottled water
-metal-plastik: Carbonated soft drinks
-metal-plastik: Cobalt blue
-metal-plastik: Diet soda
-metal-plastik: Drink
-metal-plastik: Drinking straw
-metal-plastik: Drinking water
-metal-plastik: Drinkware
-metal-plastik: Electric blue
-metal-plastik: Fashion accessory
-metal-plastik: Food
-metal-plastik: Glass
-metal-plastik: Glass bottle
-metal-plastik: Green
-metal-plastik: Hair care
-metal-plastik: Handbag
-metal-plastik: Hobo bag
-metal-plastik: Ingredient
-metal-plastik: Juice
-metal-plastik: Liquid
-metal-plastik: Material property
-metal-plastik: Packaging and labeling
-metal-plastik: Personal care
-metal-plastik: Plastic
-metal-plastik: Plastic bottle
-metal-plastik: Product
-metal-plastik: Shampoo
-metal-plastik: Soft drink
-metal-plastik: Sports drink
-metal-plastik: Tin can
-metal-plastik: Tool accessory
-metal-plastik: Toothpaste
-metal-plastik: Transparency
-metal-plastik: Water
-metal-plastik: Water bottle
-metal-plastik: White
-metal-plastik: Water jug
-metal-plastik: Aerosol can
-metal-plastik: Aluminum
-papier: Bag
-papier: Book
-papier: Book cover
-papier: Box
-papier: Brochure
-papier: Cardboard
-papier: Carton
-papier: Christmas
-papier: Construction paper
-papier: Design
-papier: Document
-papier: Finger
-papier: Font
-papier: Hand
-papier: Holly
-papier: Illustration
-papier: Line
-papier: Luggage and bags
-papier: Material property
-papier: Notebook
-papier: Office supplies
-papier: Packaging and labeling
-papier: Packing materials
-papier: Paper
-papier: Paper bag
-papier: Paper product
-papier: Pattern
-papier: Post-it note
-papier: Product
-papier: Publication
-papier: Rectangle
-papier: Shipping box
-papier: Shopping bag
-papier: Square
-papier: Text
-szklo: Alcohol
-szklo: Alcoholic beverage
-szklo: Barware
-szklo: Beer
-szklo: Beer bottle
-szklo: Beer glass
-szklo: Bottle
-szklo: Bottle stopper & saver
-szklo: Condiment
-szklo: Cosmetics
-szklo: Cuisine
-szklo: Cylinder
-szklo: Distilled beverage
-szklo: Drawing
-szklo: Drink
-szklo: Drinkware
-szklo: Food
-szklo: Food storage containers
-szklo: Glass
-szklo: Glass bottle
-szklo: Highball glass
-szklo: Home accessories
-szklo: Ice beer
-szklo: Liqueur
-szklo: Liquid
-szklo: Mason jar
-szklo: Jar
-szklo: Old fashioned glass
-szklo: Perfume
-szklo: Pint glass
-szklo: Product
-szklo: Sauces
-szklo: Sketch
-szklo: Spray
-szklo: Tableware
-szklo: Tumbler
-szklo: Vodka
-szklo: Wine bottle
-szklo: Glass
-zmieszane: Air intake part
-zmieszane: Animal fat
-zmieszane: Architecture
-zmieszane: Art
-zmieszane: Auto part
-zmieszane: Bayonne ham
-zmieszane: Beauty
-zmieszane: Capicola
-zmieszane: Ceramic
-zmieszane: Cosmetics
-zmieszane: Cuisine
-zmieszane: Cup
-zmieszane: Cylinder
-zmieszane: Diaper
-zmieszane: Dish
-zmieszane: Door
-zmieszane: Drinkware
-zmieszane: Fashion design
-zmieszane: Filter
-zmieszane: Household supply
-zmieszane: Magazine
-zmieszane: Magenta
-zmieszane: Material property
-zmieszane: Meat
-zmieszane: Mirror
-zmieszane: Mug
-zmieszane: Nail care
-zmieszane: Nail polish
-zmieszane: Porcelain
-zmieszane: Product
-zmieszane: Publication
-zmieszane: Purple
-zmieszane: Rectangle
-zmieszane: Red meat
-zmieszane: Salt-cured meat
-zmieszane: meat
-zmieszane: Sleeve
-zmieszane: Tableware
-zmieszane: FABRIC
-=======
 bio: anthurium
 bio: brunch
 bio: cucumber
@@ -224,7 +14,6 @@ bio: meal
 bio: natural foods
 bio: petal
 bio: plant
-bio: produce
 bio: summer squash
 bio: superfood
 bio: vegan nutrition
@@ -255,7 +44,6 @@ elektronika: monitor
 elektronika: multipurpose battery
 elektronika: output device
 elektronika: power supply
-elektronika: product
 elektronika: screen
 elektronika: technology
 metal-plastik: aluminum can
@@ -281,7 +69,6 @@ metal-plastik: material property
 metal-plastik: packaging and labeling
 metal-plastik: personal care
 metal-plastik: plastic
-metal-plastik: product
 metal-plastik: shampoo
 metal-plastik: soft drink
 metal-plastik: sports drink
@@ -291,6 +78,9 @@ metal-plastik: toothpaste
 metal-plastik: transparency
 metal-plastik: water bottle
 metal-plastik: metal
+metal-plastik: water jug
+metal-plastik: aerosol can
+metal-plastik: aluminum
 papier: bag
 papier: book
 papier: book cover
@@ -312,7 +102,6 @@ papier: paper bag
 papier: paper product
 papier: pattern
 papier: post-it note
-papier: product
 papier: publication
 papier: rectangle
 papier: shipping box
@@ -325,13 +114,11 @@ szklo: barware
 szklo: beer
 szklo: beer bottle
 szklo: beer glass
-szklo: bottle
 szklo: bottle stopper & saver
 szklo: condiment
 szklo: cosmetics
 szklo: distilled beverage
 szklo: drawing
-szklo: drink
 szklo: drinkware
 szklo: glass
 szklo: glass bottle
@@ -345,12 +132,9 @@ szklo: jar
 szklo: old fashioned glass
 szklo: perfume
 szklo: pint glass
-szklo: product
 szklo: sauces
 szklo: sketch
 szklo: spray
-szklo: tableware
-szklo: tumbler
 szklo: vodka
 szklo: wine bottle
 zmieszane: air intake part
@@ -382,7 +166,6 @@ zmieszane: mug
 zmieszane: nail care
 zmieszane: nail polish
 zmieszane: porcelain
-zmieszane: product
 zmieszane: publication
 zmieszane: purple
 zmieszane: rectangle
@@ -391,4 +174,4 @@ zmieszane: salt-cured meat
 zmieszane: meat
 zmieszane: sleeve
 zmieszane: tableware
->>>>>>> fix tags
+zmieszane: fabric
