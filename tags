@@ -90,6 +90,9 @@ metal-plastik: Transparency
 metal-plastik: Water
 metal-plastik: Water bottle
 metal-plastik: White
+metal-plastik: Water jug
+metal-plastik: Aerosol can
+metal-plastik: Aluminum
 papier: Bag
 papier: Book
 papier: Book cover
@@ -163,6 +166,7 @@ szklo: Tableware
 szklo: Tumbler
 szklo: Vodka
 szklo: Wine bottle
+szklo: Glass
 zmieszane: Air intake part
 zmieszane: Animal fat
 zmieszane: Architecture
@@ -201,3 +205,4 @@ zmieszane: Salt-cured meat
 zmieszane: meat
 zmieszane: Sleeve
 zmieszane: Tableware
+zmieszane: FABRIC
