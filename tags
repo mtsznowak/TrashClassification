@@ -48,9 +48,7 @@ elektronika: screen
 elektronika: technology
 metal-plastik: aluminum can
 metal-plastik: aqua
-metal-plastik: bag
 metal-plastik: beverage can
-metal-plastik: bottle
 metal-plastik: bottled water
 metal-plastik: carbonated soft drinks
 metal-plastik: cobalt blue
@@ -126,7 +124,6 @@ szklo: highball glass
 szklo: home accessories
 szklo: ice beer
 szklo: liqueur
-szklo: liquid
 szklo: mason jar
 szklo: jar
 szklo: old fashioned glass

@@ -107,23 +107,31 @@ def recognize(labels):
     points = {'bio' : 0, 'elektronika' : 0, 'metal-plastik' : 0, 'papier' : 0, 'szklo' : 0, 'zmieszane' : 0}
     for x in labels:
         text = x.description.lower()
+
+        if 'meat' in text:
+            return 'zmieszane'
         category = ''
-        max_score = 0
+        max_len = 0
 
         for key, value_list in tags_map.items():
             for value in value_list:
-                if value in text and x.score > max_score:
-                    max_score = x.score
+                if value in text and len(value) > max_len:
+                    max_len = len(value)
                     category = key
         if category == '':
             continue
-        points[category] = points[category] + max_score
+        # print ( text + " " + category + " " + str(x.score))
+        points[category] = points[category] + x.score
     
     result = 'zmieszane'
-    value = 0
+    max_score = 0.0
     for (x, y) in points.items():
-        if y > value:
+        # print (x + " " + str(y))
+        if y > max_score:
+            max_score = y
             result = x
+    if max_score < 0.5:
+        return 'nie-rozpoznano'
     return result
 
 
@@ -139,10 +147,12 @@ def g(folder_name):
             print(labs)
             print (filename + ": " + folder_name + ": " + result)
 
-# labels = detect_labels('photos/' + 'elektronika' + '/' + 'da67cf26e9d381675aba09fb1888a344.jpg')
+labels = detect_labels('photos/' + 'szklo' + '/' + 'Vintage-Swinkels-Beer-Bottle-Empty.jpg')
 # print(labels)
+# print('\n')
+print(recognize(labels))
 
-for x in ['bio', 'elektronika', 'metal-plastik', 'papier', 'szklo', 'zmieszane']:
-     g(x)
+# for x in ['bio', 'elektronika', 'metal-plastik', 'papier', 'szklo', 'zmieszane']:
+#      g(x)
 
 
