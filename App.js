@@ -35,11 +35,9 @@ export default class App extends Component<Props> {
             console.log(barcodes);
           }}
         />
-        <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
-          <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> SNAP </Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
+          <Text style={{ fontSize: 14 }}> SNAP </Text>
+        </TouchableOpacity>
         {this.state.rec && (
           <View style={styles.label}>
             <Text style={styles.text}>{this.state.rec}</Text>
@@ -105,7 +103,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   capture: {
-    flex: 0,
+    position: 'absolute',
+    bottom: 80,
     backgroundColor: '#fff',
     borderRadius: 5,
     padding: 15,
