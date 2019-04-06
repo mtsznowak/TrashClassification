@@ -4929,7 +4929,12 @@ react-native-gesture-handler@^1.1.0:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
-react-native-reanimated@^1.0.0:
+react-native-image-sequence@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-image-sequence/-/react-native-image-sequence-0.6.0.tgz#58199825915b6093c519b61868ce3841957bb96d"
+  integrity sha1-WBmYJZFbYJPFGbYYaM44QZV7uW0=
+
+react-native-reanimated@^1.0.0-alpha.12:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.0.tgz#d4e356e852ec55611de565d8791542eeb25a45ae"
   integrity sha512-jfg+lYZ2QeeV+JMibjXwHoLDZIRVwZT2qdvDDmbAsMmxRNGI95evMPXKWa3BqkzWLb2SlZ2T/MBSGrqt/CiCAQ==

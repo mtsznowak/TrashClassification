@@ -3,6 +3,7 @@ package com.trashclassification;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import dk.madslee.imageSequence.RCTImageSequencePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import org.reactnative.camera.RNCameraPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RCTImageSequencePackage(),
             new RNGestureHandlerPackage(),
             new ReanimatedPackage(),
             new RNCameraPackage()

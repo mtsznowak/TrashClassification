@@ -7,19 +7,40 @@
  */
 
 import React, { Component } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import ImageSequence from 'react-native-image-sequence';
+import {
+  greenImages,
+  brownImages,
+  blueImages,
+  grayImages,
+  yellowImages,
+  elecImages,
+} from './Images';
 
+const imagesMap = {
+  bio: brownImages,
+  elektronika: elecImages,
+  'metal-plastik': yellowImages,
+  papier: blueImages,
+  szklo: greenImages,
+  zmieszane: grayImages,
+};
 type Props = {};
 export default class App extends Component<Props> {
   constructor() {
     super();
 
     this.state = {
-      rec: 'blebleble 1.0000',
+      rec: null,
+      gif_visible: false,
     };
   }
   render() {
+    console.log('hehe');
+    console.log(this.state.rec);
+    console.log(this.state.gif_visible);
     return (
       <View style={styles.container}>
         <RNCamera
@@ -35,21 +56,31 @@ export default class App extends Component<Props> {
             console.log(barcodes);
           }}
         />
-        <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-          <Text style={{ fontSize: 14 }}> SNAP </Text>
-        </TouchableOpacity>
+        <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture} />
         {this.state.rec && (
           <View style={styles.label}>
             <Text style={styles.text}>{this.state.rec}</Text>
           </View>
         )}
+        {this.state.gif_visible &&
+          imagesMap[this.state.rec] && (
+            <View style={styles.gif}>
+              <ImageSequence
+                images={imagesMap[this.state.rec]}
+                framesPerSecond={20}
+                style={{ width: 300, height: 300 }}
+                loop={false}
+              />
+            </View>
+          )}
       </View>
     );
   }
 
   takePicture = async function() {
+    this.setState({ rec: null });
     if (this.camera) {
-      const options = { quality: 0.5, base64: false };
+      const options = { quality: 0.5, base64: false, fixOrientation: true };
       const data = await this.camera.takePictureAsync(options);
       console.log(data);
 
@@ -71,18 +102,10 @@ export default class App extends Component<Props> {
         .then(response => {
           var respText = response.text().then(function(text) {
             console.log(text);
-            var options = text.slice(1, text.length - 1).split(',');
-
-            var object = options.map(function(obj) {
-              var lines = obj.split('\n');
-              return (
-                lines[1]
-                  .split(':')[1]
-                  .trim()
-                  .replace(/"/g, '') + lines[2].split(':')[1]
-              );
-            })[0];
-            root.setState({ rec: object });
+            root.setState({ rec: text, gif_visible: true });
+            this.setTimeout(() => {
+              root.setState({ gif_visible: false });
+            }, 3000);
           });
         })
         .then(success => console.log(success))
@@ -106,9 +129,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 80,
     backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    paddingHorizontal: 20,
+    borderRadius: 45,
+    padding: 35,
+    borderWidth: 10,
+    borderColor: 'rgba(200, 200, 200, 0.85)',
+    backgroundColor: 'transparent',
     alignSelf: 'center',
     margin: 20,
   },
@@ -125,5 +150,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     color: 'white',
     fontSize: 20,
+  },
+  gif: {
+    position: 'absolute',
+    alignSelf: 'center',
+    bottom: 180,
   },
 });
