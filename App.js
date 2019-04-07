@@ -14,10 +14,12 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   Image,
 } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import ImageSequence from 'react-native-image-sequence';
+import FlexImage from 'react-native-flex-image';
 import {
   greenImages,
   brownImages,
@@ -37,12 +39,12 @@ const imagesMap = {
 };
 
 const imagesColors = {
-  bio: 'brown',
+  bio: '#A4775C',
   elektronika: 'gray',
-  'metal-plastik': 'yellow',
-  papier: 'blue',
-  szklo: 'green',
-  zmieszane: 'purple',
+  'metal-plastik': '#E7E35D',
+  papier: '#5D9CE7',
+  szklo: '#5DE764',
+  zmieszane: '#D85DE7',
 };
 
 type Props = {};
@@ -114,17 +116,25 @@ export default class App extends Component<Props> {
             this.setState({ popup_visible: false });
           }}
         >
-          <View style={{ marginTop: 22 }}>
+          <View style={{}}>
             <View>
-              <Text>Hello World!</Text>
-
-              <TouchableHighlight
-                onPress={() => {
-                  this.setState({ popup_visible: false });
-                }}
-              >
-                <Text>Hide Modal</Text>
-              </TouchableHighlight>
+              <ScrollView styles={{ flex: 1 }}>
+                <View styles={{ flex: 1 }}>
+                  <FlexImage source={require('./assets/label1.png')} />
+                </View>
+                <View styles={{ flex: 1 }}>
+                  <FlexImage source={require('./assets/label2.png')} />
+                </View>
+                <View styles={{ flex: 1 }}>
+                  <FlexImage source={require('./assets/label3.png')} />
+                </View>
+                <View styles={{ flex: 1 }}>
+                  <FlexImage source={require('./assets/label4.png')} />
+                </View>
+                <View styles={{ flex: 1 }}>
+                  <FlexImage source={require('./assets/label5.png')} />
+                </View>
+              </ScrollView>
             </View>
           </View>
         </Modal>
@@ -210,4 +220,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     bottom: 210,
   },
+  labelmodal: {},
 });

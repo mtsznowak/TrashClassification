@@ -1488,6 +1488,11 @@ ci-info@^2.0.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
+class-autobind@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/class-autobind/-/class-autobind-0.1.4.tgz#34516c49167cf8d3f639ddc186bcfa2268afff34"
+  integrity sha1-NFFsSRZ8+NP2Od3Bhrz6Imiv/zQ=
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -4919,6 +4924,13 @@ react-native-camera@^2.2.1:
   integrity sha512-N4uwZIXirj2Lk5nQlSz/gXiGKxnouLdpSxYM3jqMUmegwPWIaxvjTqggXjEC2V2Go+8/1Z5ytMCLyoO969inHw==
   dependencies:
     prop-types "^15.6.2"
+
+react-native-flex-image@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-flex-image/-/react-native-flex-image-1.2.1.tgz#5e8efbdc448a9866a2073378022747c445449b01"
+  integrity sha512-n5vOAq64S3BYE3FG3B9MI+OXUGfNQa7zlx+mr2vgESNzJfMX4tvwxePKahYe2n1HsZbdEElhFF64+1b43o8pGQ==
+  dependencies:
+    class-autobind "^0.1.4"
 
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
