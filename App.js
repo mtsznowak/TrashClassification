@@ -7,7 +7,15 @@
  */
 
 import React, { Component } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
+import {
+  Modal,
+  TouchableHighlight,
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+} from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import ImageSequence from 'react-native-image-sequence';
 import {
@@ -27,6 +35,16 @@ const imagesMap = {
   szklo: greenImages,
   zmieszane: grayImages,
 };
+
+const imagesColors = {
+  bio: 'brown',
+  elektronika: 'gray',
+  'metal-plastik': 'yellow',
+  papier: 'blue',
+  szklo: 'green',
+  zmieszane: 'purple',
+};
+
 type Props = {};
 export default class App extends Component<Props> {
   constructor() {
@@ -35,6 +53,7 @@ export default class App extends Component<Props> {
     this.state = {
       rec: null,
       gif_visible: false,
+      popup_visible: false,
     };
   }
   render() {
@@ -59,7 +78,15 @@ export default class App extends Component<Props> {
         <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture} />
         {this.state.rec && (
           <View style={styles.label}>
-            <Text style={styles.text}>{this.state.rec}</Text>
+            <Text
+              style={Object.assign({}, styles.text, {
+                backgroundColor: imagesColors[this.state.rec]
+                  ? imagesColors[this.state.rec]
+                  : 'gray',
+              })}
+            >
+              {this.state.rec}
+            </Text>
           </View>
         )}
         {this.state.gif_visible &&
@@ -73,6 +100,34 @@ export default class App extends Component<Props> {
               />
             </View>
           )}
+        <TouchableOpacity
+          onPress={() => this.setState({ popup_visible: true })}
+          style={{ position: 'absolute', bottom: 20, alignSelf: 'center' }}
+        >
+          <Image source={require('./assets/arrowsup.png')} style={{ width: 50, height: 50 }} />
+        </TouchableOpacity>
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.popup_visible}
+          onRequestClose={() => {
+            this.setState({ popup_visible: false });
+          }}
+        >
+          <View style={{ marginTop: 22 }}>
+            <View>
+              <Text>Hello World!</Text>
+
+              <TouchableHighlight
+                onPress={() => {
+                  this.setState({ popup_visible: false });
+                }}
+              >
+                <Text>Hide Modal</Text>
+              </TouchableHighlight>
+            </View>
+          </View>
+        </Modal>
       </View>
     );
   }
@@ -148,12 +203,11 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: 'rgba(52, 52, 52, 0.65)',
     borderRadius: 15,
-    color: 'white',
-    fontSize: 20,
+    fontSize: 25,
   },
   gif: {
     position: 'absolute',
     alignSelf: 'center',
-    bottom: 180,
+    bottom: 210,
   },
 });
