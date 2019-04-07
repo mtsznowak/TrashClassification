@@ -131,7 +131,7 @@ def recognize(labels):
             max_score = y
             result = x
     if max_score < 0.5:
-        return 'nie-rozpoznano'
+        return 'nie-rozpoznano' 
     return result
 
 
